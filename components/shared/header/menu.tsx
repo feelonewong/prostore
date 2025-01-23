@@ -6,8 +6,6 @@ import { EllipsisVertical, ShoppingCart, UserIcon } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
