@@ -1,12 +1,16 @@
 import React from 'react';
-import {Button} from "@/components/ui/button";
 
-const Homepage = () => {
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const Homepage = async () => {
+    await delay(1000);
     return (
-        <div>
-            <Button>123</Button>
-        </div>
+        <>
+            ProStore
+        </>
     );
 };
 
 export default Homepage;
+
+
+
