@@ -1,13 +1,23 @@
 import React from "react";
+import ProductCard from "@/components/shared/product/product-card";
 
-const ProductList = ({ data, title }: { data: any; title?: string }) => {
+const ProductList = ({
+  data,
+  title,
+  limit,
+}: {
+  data: any;
+  title?: string;
+  limit: number;
+}) => {
+  const sliceProductData = data.slice(0, limit);
   return (
     <div className="my-10">
       <h2 className="h2-bold mb-4">{title}</h2>
-      {data.length > 0 ? (
+      {sliceProductData.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {data.map((product) => {
-            return <div key={product.id}>{product.name}</div>;
+          {sliceProductData.map((product) => {
+            return <ProductCard product={product} key={product.slug} />;
           })}
         </div>
       ) : (

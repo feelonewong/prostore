@@ -6,7 +6,11 @@ const Homepage = async () => {
   await delay(1000);
   return (
     <>
-      <ProductList data={sampleData.products} title="Newest Arrivals" />
+      <ProductList
+        limit={4}
+        data={sampleData.products}
+        title="Newest Arrivals"
+      />
     </>
   );
 };
