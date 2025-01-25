@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "@/components/shared/product/product-card";
+import { Product } from "@/type";
 
 const ProductList = ({
   data,
@@ -16,7 +17,7 @@ const ProductList = ({
       <h2 className="h2-bold mb-4">{title}</h2>
       {sliceProductData.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {sliceProductData.map((product) => {
+          {sliceProductData.map((product: Product) => {
             return <ProductCard product={product} key={product.slug} />;
           })}
         </div>
