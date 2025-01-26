@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import ProductImage from "@/components/shared/product/product-image";
 const ProductDetailPage = async ({
   params,
 }: {
@@ -17,7 +18,10 @@ const ProductDetailPage = async ({
   return (
     <div className="grid grid-cols-1 md:grid-cols-5">
       {/*  Images Column */}
-      <div className="col-span-2">{/*  Image Component*/}</div>
+      <div className="col-span-2">
+        {/*  Image Component*/}
+        <ProductImage images={product.images} />
+      </div>
       <div className="col-span-2 p-5">
         <div className="flex flex-col gap-6">
           <p>
