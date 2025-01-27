@@ -4,3 +4,7 @@ export const APP_DESCRIPTION =
   "A modern ecommerce platform built with Next.js application";
 export const SERVER_URL = process.env.SERVER_URL || "http://localhost:3000";
 export const LATEST_PRODUCT_LIMIT = process.env.LATEST_PRODUCT_LIMIT || 4;
+export const signInDefaultValues = {
+  email: "",
+  password: "",
+};
