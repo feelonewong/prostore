@@ -60,7 +60,6 @@ export const config = {
       return session;
     },
     async jwt({ token, user, trigger, session }) {
-      console.log(token, user, trigger, session);
       if (user) {
         token.id = user.id;
         token.role = user.role;
