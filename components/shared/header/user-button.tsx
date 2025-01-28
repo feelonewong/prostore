@@ -2,15 +2,13 @@ import React from "react";
 import { auth } from "@/auth";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { CreditCard, User, UserIcon } from "lucide-react";
+import { UserIcon } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { signOutUser } from "@/lib/actions/user.actions";
