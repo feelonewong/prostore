@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import ProductImage from "@/components/shared/product/product-image";
+import AddToCart from "@/components/shared/product/add-to-cart";
 const ProductDetailPage = async ({
   params,
 }: {
@@ -62,10 +63,18 @@ const ProductDetailPage = async ({
               )}
             </div>
             {product.stock > 0 && (
-              <Button className="w-full mt-2">
-                <Plus />
-                Add to cart
-              </Button>
+              <div className="w-full mt-2">
+                <AddToCart
+                  item={{
+                    productId: product.id,
+                    name: product.name,
+                    slug: product.slug,
+                    price: product.price,
+                    qty: 1,
+                    images: product.images![0],
+                  }}
+                />
+              </div>
             )}
           </CardContent>
         </Card>
